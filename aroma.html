@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Coffee House</title>
+    <style>
+        body {
+			font-family: 'Raleway', sans-serif;
+			margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 250px;
+            margin-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            font-size: 1.8em;
+            color: #444;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ddd;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 15px 0;
+            padding: 12px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .menu-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .price {
+            font-weight: bold;
+            color: #555;
+        }
+        .order-button {
+            margin-left: 10px;
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .order-button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+    <script>
+        function orderItem(item) {
+            const phoneNumber = "+255788905051"; // Replace with your WhatsApp number
+            const message = `Hello, I would like to order: ${item}`;
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="aroma.jpg" alt="Coffee Shop Logo" class="logo">
+        <h1>WELCOME TO AROMA COFFEE HOUSE </h1>
+
+        <div class="section">
+            <h2>Hot Drinks</h2>
+            <ul>
+                <li><div class="menu-item"><img src="images/cppuccino.jpg" alt="Cappuccino">Cappuccino</div> <span class="price">5000 TZS</span> <button class="order-button" onclick="orderItem('Cappuccino')">Order</button></li>
+                <li><div class="menu-item"><img src="images/latte.jpg" alt="Latte">Latte</div> <span class="price">5000 TZS</span> <button class="order-button" onclick="orderItem('Latte')">Order</button></li>
+                <li><div class="menu-item"><img src="images/espresso.jpg" alt="Espresso">Espresso</div> <span class="price">3000 TZS</span> <button class="order-button" onclick="orderItem('Espresso')">Order</button></li>
+                <li><div class="menu-item"><img src="images/cppuccino.jpg" alt="White Coffee">White Coffee</div> <span class="price">3000 TZS</span> <button class="order-button" onclick="orderItem('White Coffee')">Order</button></li>
+                <li><div class="menu-item"><img src="images/black_coffee.jpg" alt="Black Coffee">Black Coffee</div> <span class="price">3000 TZS</span> <button class="order-button" onclick="orderItem('Black Coffee')">Order</button></li>
+                <li><div class="menu-item"><img src="images/green_tea.jpg" alt="Green Tea">Green Tea</div> <span class="price">4000 TZS</span> <button class="order-button" onclick="orderItem('Green Tea')">Order</button></li>
+                <li><div class="menu-item"><img src="images/herbal_tea.jpg" alt="Herbal Tea">Herbal Tea</div> <span class="price">4000 TZS</span> <button class="order-button" onclick="orderItem('Herbal Tea')">Order</button></li>
+                <li><div class="menu-item"><img src="images/masala_chai.jpg" alt="Masala Chai">Masala Chai</div> <span class="price">4500 TZS</span> <button class="order-button" onclick="orderItem('Masala Chai')">Order</button></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Snacks</h2>
+            <ul>
+                <li><div class="menu-item"><img src="images/croissant.jpg" alt="Croissant">Croissant</div> <span class="price">2500 TZS</span> <button class="order-button" onclick="orderItem('Croissant')">Order</button></li>
+                <li><div class="menu-item"><img src="images/muffin.jpg" alt="Muffin">Muffin</div> <span class="price">2000 TZS</span> <button class="order-button" onclick="orderItem('Muffin')">Order</button></li>
+                <li><div class="menu-item"><img src="images/brownie.jpg" alt="Brownie">Brownie</div> <span class="price">3000 TZS</span> <button class="order-button" onclick="orderItem('Brownie')">Order</button></li>
+                <li><div class="menu-item"><img src="images/sandwich.jpg" alt="Sandwich">Sandwich</div> <span class="price">4000 TZS</span> <button class="order-button" onclick="orderItem('Sandwich')">Order</button></li>
+                <li><div class="menu-item"><img src="images/bagel.jpg" alt="Bagel">Bagel</div> <span class="price">3500 TZS</span> <button class="order-button" onclick="orderItem('Bagel')">Order</button></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Cold Beverages</h2>
+            <ul>
+                <li><div class="menu-item"><img src="images/iced_latte.jpg" alt="Iced Latte">Iced Latte</div> <span class="price">6000 TZS</span> <button class="order-button" onclick="orderItem('Iced Latte')">Order</button></li>
+                <li><div class="menu-item"><img src="images/iced_americano.jpg" alt="Iced Americano">Iced Americano</div> <span class="price">4500 TZS</span> <button class="order-button" onclick="orderItem('Iced Americano')">Order</button></li>
+                <li><div class="menu-item"><img src="images/iced_tea.jpg" alt="Iced Tea">Iced Tea</div> <span class="price">4000 TZS</span> <button class="order-button" onclick="orderItem('Iced Tea')">Order</button></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Desserts</h2>
+            <ul>
+                <li><div class="menu-item"><img src="images/cheesecake.jpg" alt="Cheesecake">Cheesecake</div> <span class="price">5000 TZS</span> <button class="order-button" onclick="orderItem('Cheesecake')">Order</button></li>
+                <li><div class="menu-item"><img src="images/chocolate_cake.jpg" alt="Chocolate Cake">Chocolate Cake</div> <span class="price">4500 TZS</span> <button class="order-button" onclick="orderItem('Chocolate Cake')">Order</button></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Extras</h2>
+            <ul>
+                <li><div class="menu-item"><img src="images/extra_shot.jpg" alt="Extra Shot">Extra Shot</div> <span class="price">1000 TZS</span> <button class="order-button" onclick="orderItem('Extra Shot')">Order</button></li>
+                <li><div class="menu-item"><img src="images/flavored_syrup.jpg" alt="Flavored Syrup">Flavored Syrup</div> <span class="price">500 TZS</span> <button class="order-button" onclick="orderItem('Flavored Syrup')">Order</button></li>
+            </ul>
+        </div>
+
+        <footer>
+            Thank you for visiting Aroma Coffee House! ☕
+        </footer>
+    </div>
+</body>
+</html>
